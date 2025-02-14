@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Advanced functions</title>
+</head>
+
+<body>
+
+    <button class="start-button" onclick="
+            document.querySelector('.start-button')
+            .innerHTML = 'Loading....'
+            change();
+            // updateButton();
+        ">Start</button>
+
+    <script>
+
+        function change() {
+            setTimeout(() => {
+                document.querySelector('.start-button').innerHTML = 'Finished!';
+            }, 1000);
+        }
+
+        // could use an alternative seams better
+    //     function updateButton() {
+    //     const button = document.querySelector('.js-button');
+        
+    //     button.innerHTML = 'Loading...';
+    //     setTimeout(function() {
+    //       button.innerHTML = 'Finished!';
+    //     }, 1000);
+    //   }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Advanced functions</title>
+</head>
+
+<body>
+
+    <button onclick="
+            runClick();
+        ">Add to cart</button>
+
+    <p></p>
+
+    <script>
+
+
+
+        // function runClick() {
+        //     console.log("clicked the button")
+
+        //     setTimeout(function () {
+        //         document.querySelector('p')
+        //             .innerHTML = 'Added'
+        //     }, 1000);
+
+        //     setTimeout(function () {
+        //         document.querySelector('p')
+        //             .innerHTML = ''
+        //         console.log("stoped running")
+        //     }, 3000);
+
+
+        // }
+
+        let removeMessageTimeout; // Store timeout ID
+
+        function runClick() {
+            console.log("Clicked the button");
+
+            // Show "Added" after 1 second
+            setTimeout(function () {
+                document.querySelector('p').innerHTML = 'Added';
+            }, 1000);
+
+            // Clear the previous timeout (if it exists)
+            clearTimeout(removeMessageTimeout);
+
+            // Set a new timeout to remove "Added" after 2 more seconds
+            removeMessageTimeout = setTimeout(function () {
+                document.querySelector('p').innerHTML = '';
+                console.log("Stopped running");
+            }, 3000);
+        }
+
+
+    </script>
+</body>
+
+</html>
